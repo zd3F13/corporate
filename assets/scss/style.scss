@@ -2,10 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import "bootstrap";
 
-/* common.css ここから↓ */
+/* 基本設定 ここから↓ */
 body {
-  // margin: 0;
-  // padding: 0;
   font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "游ゴシック体", "Yu Gothic", YuGothic, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   color: #e9e9e9;
   font-size: 87.5%;
@@ -20,73 +18,78 @@ a {
   color: #e9e9e9;
   text-decoration: none;
   &:hover {
-  color: #e15021;
+  color: #e2a966;
   text-decoration: none;
   }
 }
-#main h2 {
-  margin-top: 0;
-  padding: 13px 0 13px 24px;
-  background-image: url(../images/bg_h2_head.png), url(../images/bg_h2_bottom.png);
-  background-repeat: no-repeat, no-repeat;
-  background-position: left top, left bottom;
-  font-size: 112.5%;
+dd {
+  margin-bottom: 16px;
 }
-#pagetop {
-  margin-bottom: 0;
-  float: right;
-}
-#pagetop a {
-  display: block;
-  min-height: 16px;
-  padding: 6px 0 6px 28px;
-  background-image: url(../images/bg_arrow.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-}
+// #main h2 {
+//   margin-top: 0;
+//   padding: 13px 0 13px 24px;
+//   background-image: url(../images/bg_h2_head.png), url(../images/bg_h2_bottom.png);
+//   background-repeat: no-repeat, no-repeat;
+//   background-position: left top, left bottom;
+//   font-size: 112.5%;
+// }
+// #pagetop {
+//   margin-bottom: 0;
+//   float: right;
+// }
+// #pagetop a {
+//   display: block;
+//   min-height: 16px;
+//   padding: 6px 0 6px 28px;
+//   background-image: url(../images/bg_arrow.png);
+//   background-repeat: no-repeat;
+//   background-position: left bottom;
+// }
 table {
   border-collapse: collapse;
-}
-caption {
-  overflow: hidden;
-}
-caption p {
-  margin-bottom: 30px;
-}
-table caption {
-  text-align: left;
-}
-table th, table td {
-  padding: 15px;
-  border: 1px solid #6c5f45;
-}
-table tr th:first-child {
-  width: 70px;
-}
-table tbody tr:nth-child(even) {
-  background-color: #f4f2f0;
+  & tr * {
+    width: 256px;
+    padding: 15px;
+    border: 1px solid #e9e9e9;
+  }
+  & th {
+    background-color: #222222;
+  }
+  & td {
+    font-weight: bold;
+    background-color: #4a4a4a;
+  }
 }
 form p {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
+  &:first-child {
+    margin-top: 30px;
+  }
+  &:nth-last-child(2) {
+    margin-bottom: 8px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  & input, textarea {
+    margin-top: 8px;
+  }
+  & input[type="text"] {
+    width: 225px;
+  }
+  & input[type="email"] {
+    width: 345px;
+  }
+  & textarea {
+    width: 465px;
+    height: 120px;
+    overflow-y: scroll;
+  }
 }
-form p:nth-last-child(2) {
-  margin-bottom: 7px;
-}
-form p:last-child {
-  margin-bottom: 0;
-}
-input, textarea {
-  margin-top: 7px;
-}
-textarea {
-  width: 420px;
-  height: 115px;
-  overflow-y: scroll;
-}
-/* common.css ここまで↑ */
+/* 基本設定 ここまで↑ */
 
 /* 基本レイアウト ここから↓ */
-.global-header, .global-nav, .hero, .local-contents, .global-footer {
+.global-header, .global-nav, .local-contents, .global-footer {
   width: 960px;
   margin: 0 auto;
 }
@@ -101,12 +104,27 @@ textarea {
   & ul {
     float: right;
     overflow: hidden;
-    & li {
-      float: left;
-      padding: 0 15px;
-      border-right: 1px solid #e9e9e9;
-      &:last-child {
-        border-right: none;
+    &:first-of-type {
+      & li {
+        float: left;
+        padding: 0 2.5px;
+        & .fa-circle {
+          color: #e9e9e9;
+        }
+        & .fa-facebook, .fa-twitter, .fa-linkedin {
+          color: #4a4a4a;
+        }
+      }
+    }
+    &:last-of-type {
+      margin-right: 30px;
+      & li {
+        float: left;
+        padding: 0 15px;
+        border-right: 1px solid #e9e9e9;
+        &:last-child {
+          border-right: none;
+        }
       }
     }
   }
@@ -116,37 +134,44 @@ textarea {
     overflow: hidden;
     margin-bottom: 0;
     & li {
-      width: 192px;
-      height: 54px;
-      padding-top: 15px;
       float: left;
-      text-align: center;
-      border: 1px solid #e9e9e9;
-      & a {
-      display: inline-block;
-      // height: 0;
-      // padding-top: 44px;
-      // overflow: hidden;
       width: 192px;
       height: 54px;
+      border: 1px solid #e9e9e9;
+      text-align: center;
+      line-height: 3.5;
+      vertical-align: middle;
+      & a {
+        display: inline-block;
+        width: 190px;
+        height: 52px;
+        color: #e9e9e9;
+        background-color: #e28a22;
+        // height: 0;
+        // padding-top: 44px;
+        // overflow: hidden;
+        &:hover {
+          color: #e9e9e9;
+          background-color: #e2a966;
+        }
       }
     }
   }
-  &__home {
-    background-image: url(../images/goodall/nav1.png);
-  }
-  &__about {
-    background-image: url(../images/goodall/nav2.png);
-  }
-  &__experience {
-    background-image: url(../images/goodall/nav3.png);
-  }
-  &__rates {
-    background-image: url(../images/goodall/nav4.png);
-  }
-  &__contact {
-    background-image: url(../images/goodall/nav5.png);
-  }
+  // &__home {
+  //   background-image: url(../images/goodall/nav1.png);
+  // }
+  // &__about {
+  //   background-image: url(../images/goodall/nav2.png);
+  // }
+  // &__experience {
+  //   background-image: url(../images/goodall/nav3.png);
+  // }
+  // &__rates {
+  //   background-image: url(../images/goodall/nav4.png);
+  // }
+  // &__contact {
+  //   background-image: url(../images/goodall/nav5.png);
+  // }
 }
 .global-footer {
   padding-top: 60px;
@@ -168,102 +193,219 @@ textarea {
     text-align: center;
   }
 }
-#main h1 {
-  margin: 0 0 30px 0;
-  padding: 35px 0 35px 65px;
-  background-image: url(../images/bg_h1_head.png), url(../images/bg_h1_bottom.png);
-  background-repeat: no-repeat, no-repeat;
-  background-position: left top, left bottom;
-  font-size: 156.25%;
-}
-#concept #nav_concept a, #plan #nav_plan a, #fair #nav_fair a, #contact #nav_contact a, nav ul li a:hover {
-  background-position: 0 -45px;
-}
+// #main h1 {
+//   margin: 0 0 30px 0;
+//   padding: 35px 0 35px 65px;
+//   background-image: url(../images/bg_h1_head.png), url(../images/bg_h1_bottom.png);
+//   background-repeat: no-repeat, no-repeat;
+//   background-position: left top, left bottom;
+//   font-size: 156.25%;
+// }
+// #concept #nav_concept a, #plan #nav_plan a, #fair #nav_fair a, #contact #nav_contact a, nav ul li a:hover {
+//   background-position: 0 -45px;
+// }
 /* 基本レイアウト ここまで↑ */
 
-/* トップページ ここから↓ */
-.hero {
-  width: 960px;
-  height: 300px;
-}
-.local-contents {
-  overflow: hidden;
-  &__image {
-    width: 300px;
-    height: 480px;
-    padding: 60px 0 0 100px;
-    float: left;
+/* Home ここから↓ */
+#index {
+  .hero {
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
   }
-  &__text {
-    width: 660px;
-    height: 480px;
-    padding: 60px 100px 0 0;
-    float: right;
-  }
-  &__summary {
-    &__about {
-      width: 480px;
-      height: 180px;
-      padding-left: 30px;
+  .local-contents {
+    overflow: hidden;
+    &__image {
+      width: 300px;
+      height: 480px;
+      padding: 60px 0 0 100px;
       float: left;
+    }
+    &__text {
+      width: 660px;
+      height: 480px;
+      padding: 60px 100px 0 0;
+      float: right;
+    }
+    &__summary {
+      &__about {
+        width: 480px;
+        height: 180px;
+        padding: 0 15px 0 15px;
+        margin-bottom: 16px;
+        float: left;
+      }
+      &__experience {
+        width: 480px;
+        height: 180px;
+        padding: 0 15px 0 15px;
+        margin-bottom: 16px;
+        float: right;
+      }
+      &__rates {
+        width: 480px;
+        height: 180px;
+        padding: 0 15px 0 15px;
+        float: left;
+      }
+      &__contact {
+        width: 480px;
+        height: 180px;
+        padding: 0 15px 0 15px;
+        float: right;
+      }
+    }
+  }
+}
+/* Home ここまで↑ */
+
+/* About ここから↓ */
+#about {
+  .local-contents {
+    padding: 0 15px 0 15px;
+    & h2 {
+      padding: 30px 0 22px 0;
+    }
+    & section {
+      overflow: hidden;
+      margin-bottom: 30px;
+      & p {
+        font-size: 112.5%;
+        line-height: 1.75;
+        margin-bottom: 30px;
+        &:first-child {
+          margin-bottom: 0;
+        }
+        & img {
+          width: 300px;
+          height: 240px;
+        }
+      }
+      &:nth-of-type(odd) img {
+        float: left;
+        margin-right: 15px;
+      }
+      &:nth-of-type(even) img {
+        float: right;
+        margin-left: 15px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+/* About ここまで↑ */
+
+/* Experience ここから↓ */
+#experience {
+  .local-contents {
+    padding: 0 15px 0 15px;
+    & section {
+      margin-bottom: 30px;
     }
     &__experience {
-      width: 480px;
-      height: 180px;
-      padding-left: 30px;
-      float: right;
+      & h2 {
+        padding: 30px 0 22px 0;
+      }
+      & h3 {
+        padding-bottom: 8px;
+      }
+      & p {
+        margin-bottom: 0px;
+        &:first-of-type::before {
+          content: "Flag";
+          background-color: red;
+        }
+        &:last-of-type::before {
+          content: "Flag";
+          background-color: blue;
+        }
+      }
+      & ul {
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 16px;
+        }
+      }
     }
-    &__rates {
-      width: 480px;
-      height: 180px;
-      padding-left: 30px;
-      float: left;
+    &__voice {
+      overflow: hidden;
+      & h2 {
+        padding: 22px 0 8px 0;
+      }
+      & figure {
+        float: left;
+        width: 465px;
+        & * {
+          float: left;
+        }
+        & figcaption {
+          padding-left: 8px;
+        }
+      }
     }
-    &__contact {
-      width: 480px;
-      height: 180px;
-      padding-left: 30px;
-      float: right;
+    &__video {
+      overflow: hidden;
+      & h2 {
+        padding: 22px 0 8px 0;
+      }
+      & figure {
+        float: left;
+        width: 465px;
+        & figcaption {
+          padding: 8px 8px 0 0;
+          }
+        &:nth-of-type(even) figcaption {
+          padding-right: 0;
+        }
+      }
     }
   }
 }
-/* トップページ ここまで↑ */
+/* Experience ここまで↑ */
 
-/* 「結婚式場のコンセプト」ページ ここから↓ */
-.concept_box {
-  margin-bottom: 30px;
-  overflow: hidden;
+/* Rates ここから↓ */
+#rates {
+  .local-contents {
+    padding: 0 15px 0 15px;
+    & h2 {
+      padding: 30px 0 22px 0;
+    }
+    & p {
+      margin-bottom: 0px;
+      &:nth-of-type(2) {
+        margin-bottom: 30px;
+      }
+    }
+    section {
+      margin-bottom: 60px;
+      & table {
+        margin-bottom: 8px;
+      }
+    }
+  }
 }
-.concept_box:last-child {
-  margin-bottom: 0;
-}
-/* 「結婚式場のコンセプト」ページ ここまで↑ */
+/* Rates ここまで↑ */
 
-/* 「プランのご案内」ページ ここから↓ */
-table thead tr th {
-  background-color: #eee8cc;
+/* Contact ここから↓ */
+#contact {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  .local-contents {
+    padding: 0 15px 0 15px;
+    overflow: hidden;
+    & h2 {
+      padding: 30px 0 22px 0;
+    }
+    & section {
+      width: 465px;
+      float: left;
+    }
+  }
+  .global-footer {
+    margin-top: auto;
+  }
 }
-table tbody tr:nth-child(odd) {
-  background-color: #ffffff;
-}
-/* 「プランのご案内」ページ ここまで↑ */
-
-/* 「ブライダルフェア」ページ ここから↓ */
-.gallery_box figure {
-  width: 180px;
-  margin: 0 0 15px 15px;
-  float: left;
-}
-.gallery_box figure:first-child {
-  margin-left: 0;
-}
-/* 「ブライダルフェア」ページ ここまで↑ */
-
-/* 「お問い合わせ」ページ ここから↓ */
-input[type="text"] {
-  width: 200px;
-}
-input[type="email"] {
-  width: 300px;
-}
-/* 「お問い合わせ」ページ ここまで↑ */
+/* Contact ここまで↑ */
