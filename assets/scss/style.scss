@@ -97,6 +97,7 @@ form p {
   overflow: hidden;
   & h1 a {
     // display: inline-block;
+    float: left;
     & img {
       // vertical-align: bottom;
     }
@@ -210,7 +211,7 @@ form p {
 #index {
   .hero {
     width: 960px;
-    height: 300px;
+    height: 320px;
     margin: 0 auto;
   }
   .local-contents {
@@ -314,12 +315,10 @@ form p {
       & p {
         margin-bottom: 0px;
         &:first-of-type::before {
-          content: "Flag";
-          background-color: red;
+          content: url("images/goodall/flag-japan.png");
         }
         &:last-of-type::before {
-          content: "Flag";
-          background-color: blue;
+          content: url("images/goodall/flag-newzealand.png");
         }
       }
       & ul {
@@ -334,14 +333,19 @@ form p {
       & h2 {
         padding: 22px 0 8px 0;
       }
-      & figure {
+      & div {
         float: left;
         width: 465px;
-        & * {
-          float: left;
+        margin-bottom: 16px;
+        &:nth-last-child(2), &:last-child {
+          margin-bottom: 0;
         }
-        & figcaption {
-          padding-left: 8px;
+        p {
+          margin-bottom: 8px;
+        }
+        & video {
+          width: 375px;
+          height: 225px;
         }
       }
     }
@@ -350,10 +354,14 @@ form p {
       & h2 {
         padding: 22px 0 8px 0;
       }
-      & figure {
+      & div {
         float: left;
         width: 465px;
-        & figcaption {
+        video {
+          width: 375px;
+          height: 225px;
+        }
+        & p {
           padding: 8px 8px 0 0;
           }
         &:nth-of-type(even) figcaption {
