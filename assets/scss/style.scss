@@ -25,14 +25,6 @@ a {
 dd {
   margin-bottom: 16px;
 }
-// #main h2 {
-//   margin-top: 0;
-//   padding: 13px 0 13px 24px;
-//   background-image: url(../images/bg_h2_head.png), url(../images/bg_h2_bottom.png);
-//   background-repeat: no-repeat, no-repeat;
-//   background-position: left top, left bottom;
-//   font-size: 112.5%;
-// }
 // #pagetop {
 //   margin-bottom: 0;
 //   float: right;
@@ -95,17 +87,16 @@ form p {
 }
 .global-header {
   overflow: hidden;
+  position: relative;
   & h1 a {
-    // display: inline-block;
     float: left;
-    & img {
-      // vertical-align: bottom;
-    }
   }
   & ul {
-    float: right;
-    overflow: hidden;
     &:first-of-type {
+      position: absolute;
+      right: 0;
+      top: 42px;
+      margin-bottom: 0;
       & li {
         float: left;
         padding: 0 2.5px;
@@ -118,12 +109,13 @@ form p {
       }
     }
     &:last-of-type {
-      margin-right: 30px;
+      float: right;
       & li {
         float: left;
         padding: 0 15px;
         border-right: 1px solid #e9e9e9;
         &:last-child {
+          padding-right: 0;
           border-right: none;
         }
       }
@@ -194,17 +186,6 @@ form p {
     text-align: center;
   }
 }
-// #main h1 {
-//   margin: 0 0 30px 0;
-//   padding: 35px 0 35px 65px;
-//   background-image: url(../images/bg_h1_head.png), url(../images/bg_h1_bottom.png);
-//   background-repeat: no-repeat, no-repeat;
-//   background-position: left top, left bottom;
-//   font-size: 156.25%;
-// }
-// #concept #nav_concept a, #plan #nav_plan a, #fair #nav_fair a, #contact #nav_contact a, nav ul li a:hover {
-//   background-position: 0 -45px;
-// }
 /* 基本レイアウト ここまで↑ */
 
 /* Home ここから↓ */
@@ -218,40 +199,60 @@ form p {
     overflow: hidden;
     &__image {
       width: 300px;
-      height: 480px;
+      height: 540px;
       padding: 60px 0 0 100px;
       float: left;
     }
     &__text {
       width: 660px;
-      height: 480px;
+      height: 540px;
       padding: 60px 100px 0 0;
       float: right;
+      & h2 {
+        border-bottom: 2px solid #e28a22;
+      }
+      & a {
+        display: inline-block;
+        padding: 10px;
+        border: 1px solid #e9e9e9;
+        &:hover {
+          border-color: #e2a966;
+        }
+      }
     }
     &__summary {
+      & h3 {
+        border-bottom: 2px solid #e28a22;
+      }
+      & a {
+        display: inline-block;
+        padding: 10px;
+        border: 1px solid #e9e9e9;
+        &:hover {
+          border-color: #e2a966;
+        }
+      }
       &__about {
         width: 480px;
-        height: 180px;
+        height: 240px;
         padding: 0 15px 0 15px;
-        margin-bottom: 16px;
         float: left;
       }
       &__experience {
         width: 480px;
-        height: 180px;
+        height: 240px;
         padding: 0 15px 0 15px;
-        margin-bottom: 16px;
         float: right;
       }
       &__rates {
         width: 480px;
-        height: 180px;
+        height: 240px;
         padding: 0 15px 0 15px;
         float: left;
       }
       &__contact {
         width: 480px;
-        height: 180px;
+        height: 240px;
         padding: 0 15px 0 15px;
         float: right;
       }
@@ -265,7 +266,9 @@ form p {
   .local-contents {
     padding: 0 15px 0 15px;
     & h2 {
-      padding: 30px 0 22px 0;
+      border-bottom: 2px solid #e28a22;
+      padding-top: 30px;
+      margin-bottom: 30px;
     }
     & section {
       overflow: hidden;
@@ -307,18 +310,34 @@ form p {
     }
     &__experience {
       & h2 {
-        padding: 30px 0 22px 0;
+        border-bottom: 2px solid #e28a22;
+        padding-top: 30px;
+        margin-bottom: 30px;
       }
       & h3 {
         padding-bottom: 8px;
       }
       & p {
         margin-bottom: 0px;
+        font-size: 107.5%;
+        font-weight: bold;
         &:first-of-type::before {
-          content: url("images/goodall/flag-japan.png");
+          content: "";
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          background: url("../images/goodall/flag-japan.png") 0 0 no-repeat /contain;
+          vertical-align: middle;
+          margin-right: 5px;
         }
         &:last-of-type::before {
-          content: url("images/goodall/flag-newzealand.png");
+          content: "";
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          background: url("../images/goodall/flag-newzealand.png") 0 0 no-repeat /contain;
+          vertical-align: middle;
+          margin-right: 5px;
         }
       }
       & ul {
@@ -331,7 +350,9 @@ form p {
     &__voice {
       overflow: hidden;
       & h2 {
-        padding: 22px 0 8px 0;
+        border-bottom: 2px solid #e28a22;
+        padding-top: 22px;
+        margin-bottom: 16px;
       }
       & div {
         float: left;
@@ -342,17 +363,22 @@ form p {
         }
         p {
           margin-bottom: 8px;
+          font-size: 107.5%;
+          font-weight: bold;
         }
         & video {
           width: 375px;
           height: 225px;
+          object-fit: none;
         }
       }
     }
     &__video {
       overflow: hidden;
       & h2 {
-        padding: 22px 0 8px 0;
+        border-bottom: 2px solid #e28a22;
+        padding-top: 22px;
+        margin-bottom: 16px;
       }
       & div {
         float: left;
@@ -360,6 +386,7 @@ form p {
         video {
           width: 375px;
           height: 225px;
+          object-fit: contain;
         }
         & p {
           padding: 8px 8px 0 0;
@@ -378,12 +405,22 @@ form p {
   .local-contents {
     padding: 0 15px 0 15px;
     & h2 {
-      padding: 30px 0 22px 0;
+      border-bottom: 2px solid #e28a22;
+      padding-top: 30px;
+      margin-bottom: 30px;
     }
     & p {
-      margin-bottom: 0px;
+      margin-bottom: 8px;
       &:nth-of-type(2) {
         margin-bottom: 30px;
+      }
+    }
+    & a {
+      display: inline-block;
+      padding: 10px;
+      border: 1px solid #e9e9e9;
+      &:hover {
+        border-color: #e2a966;
       }
     }
     section {
@@ -405,11 +442,22 @@ form p {
     padding: 0 15px 0 15px;
     overflow: hidden;
     & h2 {
-      padding: 30px 0 22px 0;
+      border-bottom: 2px solid #e28a22;
+      padding-top: 30px;
+      margin-bottom: 30px;
     }
     & section {
       width: 465px;
       float: left;
+      & i {
+        float: left;
+        width: 42px;
+        height: 42px;
+        text-align: center;
+        line-height: 1.75;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
     }
   }
   .global-footer {

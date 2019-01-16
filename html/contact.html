@@ -2,12 +2,13 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Contact | Corporate</title>
+  <title>Contact | Japanese Interpreter RUSSELL GOODALL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/colorbox.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"/>
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="css/responsive.css" media="screen and (max-width: 480px)">
+  <!-- <link rel="stylesheet" href="css/responsive.css" media="screen and (max-width: 480px)"> -->
 </head>
 <body id="contact">
   <div class="wrapper">
@@ -37,11 +38,17 @@
       <h2>連絡先情報</h2>
       <section>
         <dl>
+          <i class="fa fa-phone fa-2x"></i>
           <dt>Mobile</dt><dd>090-5335-6482</dd>
+          <i class="fa fa-envelope fa-2x"></i>
           <dt>E-mail</dt><dd>russell@goodall.jp</dd>
+          <i class="fa fa-skype fa-2x"></i>
           <dt>Skype</dt><dd>russellgoodall</dd>
+          <i class="fa fa-facebook fa-2x"></i>
           <dt>Facebook</dt><dd><a href="http://www.facebook.com/RussellGoodallInterpreter">http://www.facebook.com/RussellGoodallInterpreter</a></dd>
+          <i class="fa fa-twitter fa-2x"></i>
           <dt>Twitter</dt><dd><a href="https://twitter.com/russellgoodall">https://twitter.com/russellgoodall</a></dd>
+          <i class="fa fa-linkedin fa-2x"></i>
           <dt>LinkedIn</dt><dd><a href="https://jp.linkedin.com/in/russell-goodall-139604129">https://jp.linkedin.com/in/russell-goodall-139604129</a></dd>
         </dl>
       </section>
@@ -75,6 +82,14 @@
     <p><small>Copyright &copy; 2019 RUSSELL GOODALL All rights reserved.</small></p>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/jquery.colorbox-min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".inline").colorbox({
+        inline:true
+      });
+    });
+  </script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/holder.min.js"></script>
 </body>

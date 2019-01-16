@@ -2,12 +2,13 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Corporate</title>
+  <title>Japanese Interpreter RUSSELL GOODALL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/colorbox.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"/>
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="css/responsive.css" media="screen and (max-width: 480px)">
+  <!-- <link rel="stylesheet" href="css/responsive.css" media="screen and (max-width: 480px)"> -->
 </head>
 <body id="index">
   <header class="global-header">
@@ -46,22 +47,22 @@
     </section>
     <section class="local-contents__summary">
       <div class="local-contents__summary__about">
-        <h3><a href="about.html">About</a></h3>
+        <h3>About</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit quisquam aliquid optio ut necessitatibus sapiente! Est voluptates culpa et, dignissimos ea maxime ipsa enim accusantium veritatis sequi, earum cupiditate blanditiis?</p>
         <p><a href="about.html">詳細はこちら</a></p>
       </div>
       <div class="local-contents__summary__experience">
-        <h3><a href="experience.html">Experience</a></h3>
+        <h3>Experience</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit quisquam aliquid optio ut necessitatibus sapiente! Est voluptates culpa et, dignissimos ea maxime ipsa enim accusantium veritatis sequi, earum cupiditate blanditiis?</p>
         <p><a href="experience.html">詳細はこちら</a></p>
       </div>
       <div class="local-contents__summary__rates">
-        <h3><a href="rates.html">Rates</a></h3>
+        <h3>Rates</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit quisquam aliquid optio ut necessitatibus sapiente! Est voluptates culpa et, dignissimos ea maxime ipsa enim accusantium veritatis sequi, earum cupiditate blanditiis?</p>
         <p><a href="rates.html">詳細はこちら</a></p>
       </div>
       <div class="local-contents__summary__contact">
-        <h3><a href="contact.html">Contact</a></h3>
+        <h3>Contact</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit quisquam aliquid optio ut necessitatibus sapiente! Est voluptates culpa et, dignissimos ea maxime ipsa enim accusantium veritatis sequi, earum cupiditate blanditiis?</p>
         <p><a href="contact.html">詳細はこちら</a></p>
       </div>
@@ -79,6 +80,14 @@
     <p><small>Copyright &copy; 2019 RUSSELL GOODALL All rights reserved.</small></p>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/jquery.colorbox-min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".inline").colorbox({
+        inline:true
+      });
+    });
+  </script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/holder.min.js"></script>
 </body>
